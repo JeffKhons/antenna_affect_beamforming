@@ -46,7 +46,7 @@ for n = 1:N
     % Plot the beam pattern for each antenna array configuration
     subplot(2, N, n)
     semilogy(abs(BeamsAntennas(n, :)))
-    title([num2str(K), ' Antennas, ', num2str(d), 'm Spacing'], 'fontsize', 16)
+    title([num2str(K), ' Antennas, ', num2str(d), 'm Spacing'], 'fontsize', 12)
     set(gca, 'XLim', [1 181])
     set(gca, 'xtick', [1:30:181])
     set(gca, 'XTickLabel', {[-90:30:90]})
@@ -67,7 +67,7 @@ for n = 1:N
     % Plot the beam pattern with spacing variations
     subplot(2, N, n + N)
     semilogy(abs(BeamsSpacing(n, :)))
-    title([num2str(K), ' Ant, d=', num2str(SpaceFactor * d), 'm, Phase=', num2str(thetaOffset / pi * 180), 'deg'], 'fontsize', 16)
+    title(['d = ', num2str(SpaceFactor * d), 'm, Phase=', num2str(thetaOffset / pi * 180), 'deg'], 'fontsize', 12)
     set(gca, 'XLim', [1 181])
     set(gca, 'xtick', [1:30:181])
     set(gca, 'XTickLabel', {[-90:30:90]})
@@ -98,7 +98,7 @@ for Section = 1:2
             % Plot the beam pattern with updated spacing and phase offset
             subplot(2, N, n + N)
             semilogy(abs(BeamsSpacing(n, :)))
-            title([num2str(K), ' Ant, d=', num2str(SpaceFactor * d), 'm, Phase=', num2str(thetaOffset / pi * 180), 'deg'], 'fontsize', 16)
+            title(['d = ', num2str(SpaceFactor * d), 'm, Phase=', num2str(thetaOffset / pi * 180), 'deg'], 'fontsize', 12)
             set(gca, 'XLim', [1 181])
             set(gca, 'xtick', [1:30:181])
             set(gca, 'XTickLabel', {[-90:30:90]})
